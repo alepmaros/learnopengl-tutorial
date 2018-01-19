@@ -1,0 +1,6 @@
+obj/*
+!obj/.gitkeep
+src/glad.cpp
+include/glad.h
+include/khrplatform.h
+main
