@@ -3,4 +3,5 @@ obj/*
 src/glad.cpp
 include/glad.h
 include/khrplatform.h
+include/stb_image.h
 main

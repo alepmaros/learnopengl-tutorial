@@ -5,10 +5,10 @@ IDIR = include
 ODIR = obj
 SDIR = src
 
-_DEPS = glad.h khrplatform.h Shader.h
+_DEPS = glad.h khrplatform.h Shader.h stb_image.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = glad.o Shader.o
+_OBJ = glad.o Shader.o stb_image.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
