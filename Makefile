@@ -5,7 +5,7 @@ IDIR = include
 ODIR = obj
 SDIR = src
 
-_DEPS = glad.h khrplatform.h Shader.h stb_image.h
+_DEPS = glad.h khrplatform.h Shader.h stb_image.h camera.h
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _OBJ = glad.o Shader.o stb_image.o
@@ -15,7 +15,7 @@ $(ODIR)/%.o: $(SDIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 all: $(OBJ)
-	$(CC) -o main $(SDIR)/main.cpp $^ $(CFLAGS)
+	$(CC) -o main $(SDIR)/lightining.cpp $^ $(CFLAGS)
 
 .PHONY: clean
 
